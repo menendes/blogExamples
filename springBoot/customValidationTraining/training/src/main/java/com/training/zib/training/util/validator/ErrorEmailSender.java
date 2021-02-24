@@ -13,7 +13,7 @@ public class ErrorEmailSender<T> implements AppErrorHandler<T> {
     @Override
     public void onError(ConstraintViolation<T> violation) {
         logger.error("Sending email to support team: " +
-                violation.getPropertyPath() + " " +
+                violation.getInvalidValue() + " " +
                 violation.getMessage());
     }
 }

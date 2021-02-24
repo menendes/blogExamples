@@ -15,13 +15,6 @@ public class UsernameValidator implements ConstraintValidator<Username,String> {
         if(username != null){
           result = username.startsWith(usernamePrefix);
         }
-
-        /*if(!result){
-            String err = "There is a error";
-            constraintValidatorContext.disableDefaultConstraintViolation();
-            constraintValidatorContext.buildConstraintViolationWithTemplate(err).addConstraintViolation();
-        }*/
-
         return result;
     }
 

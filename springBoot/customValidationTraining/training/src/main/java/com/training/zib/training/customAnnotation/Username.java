@@ -4,6 +4,7 @@ import com.training.zib.training.util.validator.UsernameValidator;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -11,6 +12,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 @Size(min = 5,max = 25,message = "Username size can have min 5 char, max 25 char")
+@NotNull
 @Constraint(validatedBy = UsernameValidator.class)
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD})
