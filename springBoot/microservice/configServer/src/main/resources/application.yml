@@ -1,6 +1,7 @@
 ---
 server:
   port: 8888
+
 spring:
   cloud:
     config:
@@ -15,4 +16,5 @@ spring:
     user:
       name: zib
       password: zib
+
 
